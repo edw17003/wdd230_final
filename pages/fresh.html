@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page for all course work to be done in WDD 230 at BYU Idaho">
+    <title>Bountiful Foods</title>
+    <script src="../scripts/fresh.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/fresh.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portal">
+        <header>
+            <h1>Bountiful Foods</h1>
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        HOME
+                    </a>
+                </li>
+                <li>
+                    <a href="./fresh.html">
+                        FRESH
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        ABOUT US
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <main>            
+            <div class="content">
+                <form id="freshForm" onsubmit="submitForm(event)">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+                    <input type="checkbox" id="fruit1" name="checkbox" value="label">
+                    <label for="fruit1">loading...</label><br>
+                    <input type="checkbox" id="fruit2" name="checkbox" value="label">
+                    <label for="fruit2">loading...</label><br>
+                    <input type="checkbox" id="fruit3" name="checkbox" value="label">
+                    <label for="fruit3">loading...</label><br><br>
+                    <label for="instructions">Special Instructions:</label><br>
+                    <input type="text" id="instructions" name="instructions"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div class="formOutput"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="directions">
+                <b>Directions</b>
+                <p>
+                    <a href="https://www.google.com/maps" target="_blank">
+                    123 Fake Street, Carlsbad California
+                    </a>
+                </p>
+            </div>
+            <div class="business_information">
+                <p class="copyright"></p>
+                <p class="modified"></p>
+                <br>
+                <br>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/icons8-facebook-48.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram-48.png" alt="instagram"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="../images/icons8-twitter-48.png" alt="twitter"></a>
+            <a href="https://www.wechat.com/us/" target="_blank"><img src="../images/icons8-wechat-48.png" alt="wechat"></a>
+            </div>
+            <div class="contact">
+                <b>Contact Us</b>
+                <p>Email: support@bountifulfoods.com</p>
+                <p>Phone: (555) 555-5555</p>
+                <p>(Mon - Sat 9:00AM - 5:00PM)</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
