@@ -2,7 +2,7 @@ const date = new Date();
 const year = date.getFullYear();
 const modifiedDate = document.lastModified;
 const fruitsAPI = 'https://fruityvice.com/api/fruit/all'
-let numDrinks = localStorage.getItem(0)
+let numDrinks = localStorage.getItem(0) ? localStorage.getItem(0) : 0
 let fruit1
 let fruit2
 let fruit3
