@@ -2,7 +2,7 @@ const date = new Date();
 const year = date.getFullYear();
 const modifiedDate = document.lastModified;
 const weatherAPI = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.15846&lon=-117.343&exclude=minutely,hourly,alerts&units=imperial&appid=b1159721bd65dac769dcd4f88420a53a'
-let numDrinks = localStorage.getItem(0)
+let numDrinks = localStorage.getItem(0) ? localStorage.getItem(0) : 0
 
 fetch(weatherAPI)
     .then(res => res.json())
@@ -24,6 +24,14 @@ fetch(weatherAPI)
             Day 3: ${data.daily[2].temp.day}°F <br>
         `
     })
+
+document.getElementById("clearFormBtn").addEventListener("click", clear);
+
+function clear(event) {
+    console.log("clear")
+    localStorage.clear()
+    location.reload()
+}
 
 document.querySelector('.freshInfo').innerHTML = `${numDrinks}`
 document.querySelector('.copyright').innerHTML = `Copyright ${year} | Jake Edwards`

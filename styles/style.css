@@ -84,6 +84,20 @@ main {
     margin: 20px;
 }
 
+button {
+    width: 50%;
+    background-color: #64829B;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4d6e8a;
+}
+
 footer {
     background-color: #1e2d2fe1;
     color: white;
