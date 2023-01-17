@@ -9,6 +9,10 @@ h1 {
     margin: 0;
 }
 
+p {
+    font-weight: 300;
+}
+
 header {
     position: fixed;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
@@ -49,10 +53,6 @@ header li :hover {
     color: #64829b;
 }
 
-main {
-    background-color: white;
-}
-
 #homepage_fruit {
     max-width:100%;
 }
@@ -74,6 +74,7 @@ main {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     padding: 15px;
+    min-width: 280px;
 }
 
 .card h2 {
@@ -101,7 +102,7 @@ button:hover {
 footer {
     background-color: #1e2d2fe1;
     color: white;
-    height: 10rem;
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
@@ -114,4 +115,48 @@ footer a {
 
 footer div {
     margin: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+    }
+    header * {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+    }
+    header h1 {
+        border: none;
+        padding: 0;
+    }
+    header ul {
+        margin: 0 auto;
+    }
+    .content {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    .card {
+        margin: 0 auto;
+    }
+    #homepage_fruit {
+        margin-top: 100px;
+    }
+    .info {
+        margin-top: 100px;
+    }
+    .business_information {
+        grid-row: 3;
+    }
 }

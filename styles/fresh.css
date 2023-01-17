@@ -1,5 +1,6 @@
 form {
     width: 30%;
+    min-width: 280px;
     margin-top: 30px;
     padding: 20px;
     background-color: white;
@@ -31,3 +32,15 @@ input[type=text], select {
   input[type=submit]:hover {
     background-color: #4d6e8a;
   }
+
+  @media screen and (max-width: 750px) {
+    .content {
+      padding: 100px 0 0;
+      width: 100%;
+      display: flex;
+    }
+    form {
+      margin: 20px auto;
+      justify-self: center;
+    }
+}

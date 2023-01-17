@@ -7,7 +7,6 @@ let numDrinks = localStorage.getItem(0) ? localStorage.getItem(0) : 0
 fetch(weatherAPI)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         const currentTemp = data.current.temp
         const currentDescription = data.current.weather[0].description
         const currentHumidity = data.current.humidity
@@ -28,7 +27,6 @@ fetch(weatherAPI)
 document.getElementById("clearFormBtn").addEventListener("click", clear);
 
 function clear(event) {
-    console.log("clear")
     localStorage.clear()
     location.reload()
 }
