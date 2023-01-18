@@ -6,11 +6,11 @@ let numDrinks = localStorage.getItem(0) ? localStorage.getItem(0) : 0
 let fruit1
 let fruit2
 let fruit3
-let totalCarbs
-let totalProtein
-let totalFat
-let totalSugar
-let totalCalories
+let totalCarbs = 0
+let totalProtein = 0
+let totalFat = 0
+let totalSugar = 0
+let totalCalories = 0
 
 let response = fetch(fruitsAPI, {mode: 'cors'})
     .then(res => res.json())
@@ -18,31 +18,6 @@ let response = fetch(fruitsAPI, {mode: 'cors'})
         fruit1 = data[Math.floor(Math.random() * 40)]
         fruit2 = data[Math.floor(Math.random() * 40)]
         fruit3 = data[Math.floor(Math.random() * 40)]
-        totalCarbs = (
-            fruit1.nutritions.carbohydrates 
-            + fruit2.nutritions.carbohydrates
-            + fruit3.nutritions.carbohydrates
-        )
-        totalProtein = (
-            fruit1.nutritions.protein 
-            + fruit2.nutritions.protein
-            + fruit3.nutritions.protein
-        )
-        totalFat = (
-            fruit1.nutritions.fat 
-            + fruit2.nutritions.fat
-            + fruit3.nutritions.fat
-        )
-        totalSugar = (
-            fruit1.nutritions.sugar 
-            + fruit2.nutritions.sugar
-            + fruit3.nutritions.sugar
-        )
-        totalCalories = (
-            fruit1.nutritions.calories 
-            + fruit2.nutritions.calories
-            + fruit3.nutritions.calories
-        )
 
         document.getElementById('fruit1').value = fruit1.name
         document.getElementsByTagName('label')[3].innerText = fruit1.name
@@ -62,8 +37,31 @@ function submitForm(event) {
     var eachCheckbox = document.getElementsByName('checkbox')
     let allMarkedBoxes = [];
     for (var checkbox of eachCheckbox) {
-        if (checkbox.checked)
+        if (checkbox.checked) {
             allMarkedBoxes = allMarkedBoxes.concat(' ' + checkbox.value)
+            if (checkbox.value == fruit1.name) { 
+                console.log("box1")
+                totalCarbs += fruit1.nutritions.carbohydrates
+                totalProtein += fruit1.nutritions.protein
+                totalFat += fruit1.nutritions.fat 
+                totalSugar += fruit1.nutritions.sugar 
+                totalCalories += fruit1.nutritions.calories 
+            } else if (checkbox.value == fruit2.name) {
+                console.log("box2")
+                totalCarbs += fruit2.nutritions.carbohydrates
+                totalProtein += fruit2.nutritions.protein
+                totalFat += fruit2.nutritions.fat 
+                totalSugar += fruit2.nutritions.sugar 
+                totalCalories += fruit2.nutritions.calories 
+            } else if (checkbox.value == fruit3.name) {
+                console.log("box3")
+                totalCarbs += fruit3.nutritions.carbohydrates
+                totalProtein += fruit3.nutritions.protein
+                totalFat += fruit3.nutritions.fat 
+                totalSugar += fruit3.nutritions.sugar 
+                totalCalories += fruit3.nutritions.calories 
+            }
+        }
     }
     document.querySelector('.formOutput').innerHTML = `
         <br>
