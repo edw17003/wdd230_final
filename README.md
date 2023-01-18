@@ -1,4 +1,4 @@
-# wdd230 Final Project
+# WDD230 Final Project
 This is a mock company website for "Bountiful Foods", which sells fresh produce, fruits, drinks, desserts, etc.
 
 ## Design Specifications
