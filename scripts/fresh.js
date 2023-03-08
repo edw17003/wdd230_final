@@ -1,7 +1,7 @@
 const date = new Date();
 const year = date.getFullYear();
 const modifiedDate = document.lastModified;
-const fruitsAPI = 'https://fruityvice.com/api/fruit/all'
+const fruitsAPI = 'https://andejuli.github.io/wdd230/fruit.json'
 let numDrinks = localStorage.getItem(0) ? localStorage.getItem(0) : 0
 let fruit1
 let fruit2
@@ -39,22 +39,19 @@ function submitForm(event) {
     for (var checkbox of eachCheckbox) {
         if (checkbox.checked) {
             allMarkedBoxes = allMarkedBoxes.concat(' ' + checkbox.value)
-            if (checkbox.value == fruit1.name) { 
-                console.log("box1")
+            if (checkbox.value == fruit1.name) {
                 totalCarbs += fruit1.nutritions.carbohydrates
                 totalProtein += fruit1.nutritions.protein
                 totalFat += fruit1.nutritions.fat 
                 totalSugar += fruit1.nutritions.sugar 
                 totalCalories += fruit1.nutritions.calories 
             } else if (checkbox.value == fruit2.name) {
-                console.log("box2")
                 totalCarbs += fruit2.nutritions.carbohydrates
                 totalProtein += fruit2.nutritions.protein
                 totalFat += fruit2.nutritions.fat 
                 totalSugar += fruit2.nutritions.sugar 
                 totalCalories += fruit2.nutritions.calories 
             } else if (checkbox.value == fruit3.name) {
-                console.log("box3")
                 totalCarbs += fruit3.nutritions.carbohydrates
                 totalProtein += fruit3.nutritions.protein
                 totalFat += fruit3.nutritions.fat 
